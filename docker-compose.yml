@@ -1,13 +1,10 @@
-
-#Este docker-compose no funcionara si antes no se ha creado la imagen live a partir de la imagen centos con systemd
-#Visita https://hub.docker.com/r/deathmetall/issabel para saber como.
 version: '3.7'
 
 services:
     # PBX
     issabel:
-        image: deathmetall/issabel:live
-#        build: ./
+        image: hvillamar/issabel:live
+        #build: ./
         restart: always
         container_name: pbx_issabel
         network_mode: host
